@@ -1,0 +1,45 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <div class="content-section">
+          <div class="media">
+            <img class="prof-img" src="{{user_profile.image.url}}">
+            <div class="prof-un">
+              <h2 class="">{{user_profile.author}}</h2>
+            </div>
+              <div>
+                <ul>
+                    <li class="in"><b>{{user_post_count}}</b>&nbsp;Posts</li>&nbsp; &nbsp;
+                    <li class="in"><b>{{user_followers}}</b>&nbsp;Followers</li> &nbsp; 
+                    <li class="in"><b>{{user_following}}</b>&nbsp;Following</li>
+                    <li>
+                        <form action="/follow/" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{user.username}}" name="follower">
+                            <input type="hidden" value="{{user_object.username}}" name="user">
+                            {% if user_object.username == user.username %}
+                            <!--<button type="submit">Update</button>-->
+                            {% else %}
+                            <button class="fol-unfol" type="submit">{{button_text}}</button>
+                            {% endif %}
+                        </form>
+                    </li>
+            </ul>
+              </div>
+              <div>
+                <p class="bio-cap">{{user_profile.bio}}</p>  
+              </div>
+          </div>
+        <div class="post-img-sec scroll">
+        <div id = "gallery">
+         {% for post in user_posts %}
+            <img src="{{post.image.url}}" style="width:50%">
+        {% endfor %}
+            
+        </div>
+</div>
+    </div>
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,25 @@
+{% extends 'base2.html' %}
+{% block content %}
+    {% if profile_lists_len == 0 %}
+        <img class = "no-post" src="/media/no_user.jpg"/> 
+    {% else %}
+        {% for users in username_profile_list %}
+                        <section class="search-result-item">
+                            <div class="search-body">
+                
+            <a href="#"><img class="search-image" src="{{users.image.url}}"></a>
+                            
+                            <div class="search-result-body">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <h4 class="search-username"><a href="/profile/{{users.author}}"><b>{{users.author}}</b></a></h4>
+                                        <p class="search-description">{{users.bio}}</p>
+                                    </div>
+                                
+                                </div>
+                            </div>
+            </div>
+                        </section>
+                        {% endfor %} 
+            {% endif %}
+{% endblock content %}

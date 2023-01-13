@@ -1,0 +1,17 @@
+{% extends "base2.html" %}
+{% block content %}
+  <div class="posts">         
+            <a class="po" href="{% url 'profile' post.author.username %}">{{object.author}}</a>
+            {% if post.author == user %}
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' post.id %}"><i class="fa-solid fa-trash-can del-can"></i></a>
+            {% endif %}
+            <br />
+            <img class = "post-img1" src="{{object.image.url}}"/>
+            <br />
+            <strong class="username">{{object.author}}</strong><small class="caption">{{object.caption}}</small> 
+            <br />
+            <br />
+            <small class="date">{{object.date_posted|date:"F d, Y"}}</small>
+        </div>
+{% endblock content %}  
+ 

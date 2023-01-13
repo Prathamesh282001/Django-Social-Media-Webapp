@@ -1,0 +1,594 @@
+html,body {
+    overflow-x: hidden;
+    margin: 0px;
+} 
+.head-bar {
+    background-color: #01838e;
+    overflow: hidden;
+    background-size: cover;
+    height: 11vh;
+    
+}  
+
+.search-form{
+    position: relative;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    margin-top: -50px;
+}
+
+.search-form:hover{
+    width: 200px;
+    cursor: pointer;
+}
+.search-form:hover input{
+    display: block;
+}
+.search-form:hover .fa{
+    background: #07051a;
+    color: white;
+} 
+
+.search-input{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+
+}
+
+.fa{
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+    position: absolute;
+}
+
+h1 {
+    font-size : 30px;
+}
+li {
+    list-style: none;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/*--------------------------navbar-------------------*/ 
+
+.nav1 {
+    margin-left: 40px;
+    margin-bottom: 0;
+    font-size: 40px;
+    color: white;
+    
+}
+
+.nav1 a {
+    text-decoration: none;
+    cursor: pointer;   
+}
+
+.nav1 a:hover {
+    color: white;
+}
+.nav2 {
+    float: right;
+    margin-top: -40px;
+    margin-right: 200px;
+    list-style: none;
+}
+
+.nav3 {
+    float: right;
+    margin-top: -40px;
+    margin-right: 130px;
+}
+
+
+/* -------------------------home post section ------------*/
+.posts {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 10px;
+    width: 35%;
+    height: 55vh;
+    margin-left: 20%;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    text-align: center;
+
+
+}
+
+.btn-danger {
+    color: black;
+    text-decoration: none;
+
+    
+}
+
+
+.user-img1 {
+    width: 10%;
+    height: 5vh;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    margin-left: 10px;
+    padding: 0px;
+    border-radius: 70px;
+    float: left;
+    
+}
+
+.user-im{
+    border-radius: 10px;
+    width: 3%;
+    height: 5vh;
+    border-radius: 70px;
+    margin-right: 80px;
+    padding: 0px;
+    margin-top: -70px;
+    float: right;
+
+}
+
+.post-img1 {
+    width: 100%;
+    height: 40vh;
+    margin-top: -5px;
+    padding: 0px;
+    background-position: center;
+}
+
+.username {
+    float: left;
+    margin-left: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    margin-right: 260px;
+    font-family: sans-serif;
+}
+
+.date {
+    float: left;
+    margin-bottom: 90px;
+    margin-left: 10px;
+    font-family: serif;
+
+}
+
+
+/*-------------------------login form-------------- */
+fieldset {
+    border: none;
+}
+.login-form {
+    padding: 80px;
+}
+
+.register-form{
+    padding-left: 150px;
+    padding-top: 10px;
+}
+.form-group1 {
+    background-color: white;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 40vh;
+    width: 50%;
+    padding: 40px,40px,40px,40px;
+}
+
+.form-group3 {
+    background-color: white;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 75vh;
+    width: 40%;
+    padding: 80px,80px,40px,40px;
+
+}
+
+.register-form small {
+    padding: 35px;
+    margin-bottom: 20px;
+}
+
+.form-group{ 
+    padding: 40px,40px,40px,40px;
+}
+input{
+    width: 80%;
+      padding: 12px 20px;
+      margin: 18px 20px;
+      box-sizing: border-box;
+    border-radius: 10px;
+} 
+
+form .p {
+    font-family: monospace;
+}
+legend {
+  background-color: black;
+  color: white;
+  padding: 10px 13px;
+}
+
+.log-but{
+    margin-top: 15px;
+    margin-right: 20px;
+    float: right;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.log-but1 {
+    background-color: #1fd3c5;
+    padding: 10px 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.need-ac1 {
+    float: right;
+    color: blue;
+    margin-top: 30px;
+    margin-right: 8px;
+
+}
+.po {
+    text-decoration: none;
+    color: black;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+
+}
+
+.po:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ----------------profile page section  -----------*/
+
+.prof-img {
+    border-radius: 60%;
+    float: left;
+    width: 300px;
+    height: 25vh;
+    padding-left: 60px;
+    padding-right: 60px;
+    
+}
+
+.prof-un {
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+ul li.in {
+    display: inline-block;
+    
+    font-size: 20px;
+}
+.bio-cap {
+    font-family: serif;
+}
+
+#gallery {
+   line-height:0;
+   -webkit-column-count:5; /* split it into 5 columns */
+   -webkit-column-gap:10px; /* give it a 5px gap between columns */
+   -moz-column-count:5;
+   -moz-column-gap:5px;
+   column-count:3;
+   column-gap:15px;
+
+    
+}
+
+
+#gallery img {
+   width: 100% !important;
+   height: 40vh !important;
+   margin-bottom:10px; /* to match column gap */
+   border-radius: 10px;
+    filter: grayscale(100%);
+    
+}
+#gallery img:hover {
+   filter:none;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+#gallery img:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.del-can {
+    
+    margin-top: 10px;
+    color: red;
+    float: right;
+    margin-right: 10px;
+}
+
+.btn-post-del {
+    background-color: red;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-post-cancel {
+    background-color: #006caf;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.btn-post-cancel:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.post-img-sec {
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 90vh;
+    width: 80%;
+    padding-right:20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 150px;
+   overflow-y: scroll;
+}
+
+/*-----------------------profile update section ----------------*/
+
+#myForm.textinput {
+    width: 40%;
+}
+#myForm.emailinput {
+    width: 40%;
+}
+
+.myform small {
+    
+    display: none;
+}
+
+.myform a {
+    margin-top: 5px;
+    color: blue;
+}
+
+.textarea{
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.cancel {
+    background-color: red;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.upd {
+    background-color: green;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.open-button {
+    
+    margin-left: 0px;
+    margin-top: -500px;
+    padding: 10px 13px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+
+#myForm{
+    display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.fol-unfol {
+    padding: 10px 13px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* -----------------------sidebar -----------------*/
+.upload-div{
+    margin-left: 1000px;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-right: 100px;
+    margin-top: 300px;
+    height: 45vh;
+    position: fixed;
+    z-index: 10;
+}
+
+.upload-icon{
+    font-size: 140px;
+    margin-left: 60px;
+    margin-top: 10px;
+    color: #006caf;
+}
+
+.upload-but {
+    font-size: 15px;
+    margin-left: 40px;
+      /*text-shadow: 1px 1px #fff;*/
+    font-weight: 100;
+    font-size: 10pt;
+
+    }
+
+.upload-but1 {
+    font-size: 15px;
+    padding: 10px 10px;
+    background-color: #e05c84;
+    color: white;
+      /*text-shadow: 1px 1px #fff;*/
+    margin-left: 95px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    }
+
+.cap-in{
+    margin-top: -10px;
+    margin-left: 70px;
+    border-radius: 5px;
+}
+
+.alert-success {
+  border: 1px solid rgb(214,233,198);
+  background-color: rgb(223,240,216);
+  width: 40%;
+  padding: 10px 10px;
+  text-align: center;
+  margin-left: 160px;
+  margin-top: 20px;
+}
+
+.alert-error {
+  border: 1px solid rgb(251,238,213);
+  background-color: rgb(252,248,227);
+}
+
+
+/*--------------------search section ---------------*/
+
+.search-image {
+    border-radius: 60%;
+    width: 80px;
+    height: 8vh;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+}
+
+.search-body{
+    background-color: white;/*#e05c84;*/
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 10vh;
+    width: 70%;
+    padding-right:20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.search-username a {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: -150px;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.search-result-body{
+    margin-top: -80px;
+    margin-left: 140px;
+}
+
+/*------------------------suggestion------------*/
+.sugge {
+    margin-left: 1000px;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-right: 100px;
+    width: 23%;
+    height: auto;
+    z-index: 10;
+    margin-bottom: auto;
+    border-style: groove;
+    position: fixed;
+    margin-top: 100px;
+    
+}
+
+.sugge-name {
+    margin-left: 10px;
+    
+}
+
+.prof-img11 {
+    width: 13%;
+    height: 5vh;
+    padding: 0px;
+    border-radius: 70px;
+    float: left;
+    margin-right: 5px;
+    
+}
+
+.sugge-name a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+/*-------no-post--------*/
+.no-post {
+    width: 50%;
+    height: 40vh;
+    margin-top: 150px;
+    margin-left: 120px;
+    padding: 0px;
+    background-position: center;
+}
+
