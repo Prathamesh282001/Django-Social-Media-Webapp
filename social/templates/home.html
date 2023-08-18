@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        {% if user_post_count == 0 %}
+            <img class = "no-post" src="media/no_post.jpg"/> 
+            <ul>
+                <li style="margin-left: 80px;"><b>.</b>  Follow others to see posts</li>
+                <li style="margin-left: 80px;"><b>.</b>  People you follow may not have any posts</li>
+            </ul>
+        {% else %}
+        {% for post in posts %}
+        <div class="posts">
+            
+            <a class="po" href="{% url 'profile' post.author.username %}">{{post.author}}</a>
+            {% if post.author == user %}
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' post.id %}"><i class="fa-solid fa-trash-can del-can"></i></a>
+            {% endif %}
+            <br />
+            <img class = "post-img1" src="{{post.image.url}}"/>
+            <br />
+            <strong class="username">{{post.author}}</strong><small class="caption">{{post.caption}}</small> 
+            <br />
+            <br />
+            <small class="date">{{post.date_posted|date:"F d, Y"}}</small>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </section>
+{% endblock content %}
+
+
+
+ 

@@ -1,0 +1,116 @@
+{% load static %} 
+{% load crispy_forms_tags %} 
+<!DOCTYPE html>
+<html lang = 'en'>  
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/ad67667019.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <title>Home Page</title>
+    <script>
+        var milliseconds = 3000;
+
+        setTimeout(function () {
+            document.getElementById('alert').remove();
+        }, milliseconds);
+    </script>
+</head>
+ 
+<body>
+
+    <section class="head-bar">
+        <nav>
+            <ul>
+                <li class="nav1"><h1 class = "nav1"><a href = "{% url 'blog-home' %}"><b>SocialWeb</b></a></h1></li>&nbsp;  
+                {% if user.is_authenticated %}
+                    <li class="nav2"><a href="{% url 'logout' %}">Logout</a></li> &nbsp; 
+                    <li class="nav3"><a href="{% url 'profile_update' %}">Profile</a></li>
+                {% else %}
+                    <li class="nav2"><a href="{% url 'login' %}">Login</a></li> &nbsp; 
+                    <li class="nav3"><a href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </section>
+    <div class="content-section">
+          <div class="media">
+            <img class="prof-img" src="{{user_profile.image.url}}">
+            <div class="prof-un">
+              <h2 class="">{{user_profile.author}}</h2>
+            </div>
+              <div>
+                <ul>
+                    <li class="in"><b>{{user_post_count}}</b>&nbsp;Posts</li>&nbsp; &nbsp;
+                    <li class="in"><b>{{user_followers}}</b>&nbsp;Followers</li> &nbsp; 
+                    <li class="in"><b>{{user_following}}</b>&nbsp;Following</li>
+                    <li>
+                        <form action="/follow/" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{user.username}}" name="follower">
+                            <input type="hidden" value="{{user_object.username}}" name="user">
+                            {% if user_object.username == user.username %}
+                            <!--<button type="submit">Update</button>*/-->
+                            {% else %}
+                            <button class="fol-unfol" type="submit">{{button_text}}</button>
+                            {% endif %}
+ 
+                        </form>
+                    </li> 
+
+            </ul>
+              </div>
+              <div>
+                <p class="bio-cap">How You Doin</p>  
+              </div>
+          </div>
+          <div class="update-in">
+                        <button class="open-button" onclick="openForm()">Update Profile</button>
+                        <div id = "myForm">
+                        <form method="POST", enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset class="myform">
+                                {{ u_form|crispy }}
+                                {{ p_form|crispy }}
+                                <button class="upd">Update</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                            </fieldset>
+                        </form>
+                        </div>
+    
+                    </div>
+        <div class="post-img-sec scroll"> 
+        <div id = "gallery">
+         {% for post in user_posts %}
+            <a href="{% url 'post-detail' post.id %}"><img src="{{post.image.url}}" style="width:50%;"></a>
+        {% endfor %}
+            
+        </div>
+</div>
+    </div>
+
+	<!-- Scripts
+    ================================================== -->
+    <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>  
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/uikit.js' %}"></script>
+    <script src="{% static 'assets/js/simplebar.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+ 
+
+    <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
+
+    <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>
+
+
+
